@@ -1,0 +1,79 @@
+## API #####
+api:
+
+  user:
+    - url: "GET /admin/login/user.json"
+      custom: "login"
+    - url: "GET /admin/logout"
+      custom: "logout"
+    - url: "GET /admin/user/get.json"
+      action: "get"
+    - url: "GET /admin/user/list.json"
+      action: "getList"
+    - url: "POST /admin/user/add.json"
+      action: "add"
+    - url: "PUT /admin/user/update.json"
+      action: "update"
+    - url: "PUT /admin/user/remove.json"
+      action: "remove"
+    - url: "PUT /admin/user/restpass.json"
+      action: "restPass"
+    - url: "GET /admin/user/getGroups.json"
+      action: "getGroupsByUser"
+
+  file:
+    - url: "GET /admin/file/list.json"
+      action: "getList"
+    - url: "GET /admin/file/get.json"
+      action: "get"
+    - url: "GET /admin/getFile/:fileId"
+      custom: "getFile"
+    - url: "POST /admin/file/add.json"
+      action: "add"
+
+## 网页 #####
+website:
+  home:
+    - url: "GET /admin/login"
+      template: "admin_common_login"
+      parameter:
+        title: "login"
+    - url: "GET /admin/home"
+      template: "home"
+      parameter:
+        title: "home"
+
+  user:
+    - url: "GET /admin/user/list"
+      template: "datacenter/user_list"
+      parameter:
+        title: "user list"
+        topmenu: "datacenter"
+        sidemenu: "user"
+    - url: "GET /admin/user/add"
+      template: "datacenter/user_update"
+      parameter:
+        title: "user add"
+        operation: "add"
+        topmenu: "datacenter"
+        sidemenu: "user"
+    - url: "GET /admin/user/edit/:id"
+      template: "datacenter/user_update"
+      parameter:
+        title: "user update"
+        operation: "update"
+        topmenu: "datacenter"
+        sidemenu: "user"
+
+  file:
+    - url: "GET /admin/file/list"
+      template: "datacenter/file_list"
+      parameter:
+        title: "file list"
+        topmenu: "datacenter"
+        sidemenu: "file"
+
+## 重定向 #####
+redirect:
+  - url: "GET /"
+    target: "/admin/home"

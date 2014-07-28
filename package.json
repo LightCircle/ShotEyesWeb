@@ -1,0 +1,27 @@
+{
+  "name": "shoteyes",
+  "version": "0.0.1",
+  "description": "nodejs-based light shoteyes",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LightCircle/ShotEyesWeb.git"
+  },
+  "keywords": [
+    "light",
+    "shoteyes"
+  ],
+  "author": "r2space@gmail.com",
+  "bin": {
+  },
+  "license": "MIT",
+  "dependencies": {
+    "light-framework": "0.0.2",
+    "light-model": "0.0.2"
+  },
+  "devDependencies": {
+  }
+}

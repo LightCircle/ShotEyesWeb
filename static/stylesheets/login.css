@@ -1,0 +1,175 @@
+
+/** 页面头 */
+.header {
+  height: 71px;
+  border-bottom: 1px solid #eee!important;
+  overflow: hidden;
+  padding: 0 30px;
+  border-width: 0;
+  min-height: 28px;
+}
+
+.header > div {
+  display: inline-block;
+  vertical-align: middle;
+  height: 49px;
+  float: left;
+}
+
+.logo {
+  margin-top: 20px;
+  margin-left: 0;
+}
+
+.logo > img {
+  height: 30px;
+}
+
+.login-header-space {
+  float: right;
+  text-align: right;
+  display: block;
+  vertical-align: middle;
+  line-height: 71px;
+}
+
+/** 容器 */
+.container {
+}
+
+/** 左 */
+.txt-color-red {
+  color: #a90329!important;
+}
+
+.login-header-big {
+  font-weight: 400;
+}
+
+h1 {
+  letter-spacing: -1px;
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.hero {
+  height: 360px;
+  width: 100%;
+  float: left;
+}
+
+/** 右 */
+.well {
+  background: #fbfbfb;
+  border: 1px solid #ddd;
+  position: relative;
+  border-radius: 0px;
+  margin-top: 50px;
+  padding: 0!important;
+}
+
+form {
+  margin: 0;
+  outline: 0;
+  color: #666;
+  position: relative;
+}
+
+form header {
+  display: block;
+  padding: 15px 13px;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 300;
+  color: #232323;
+  background: rgba(248, 248, 248, .9);
+  border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+form fieldset {
+  display: block;
+  padding: 25px 14px 5px;
+  border: 0;
+  background: rgba(255,255,255,.9);
+  position: relative;
+}
+
+form section {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+form .label {
+  display: block;
+  margin-bottom: 6px;
+  line-height: 19px;
+  font-weight: 400;
+  font-size: 13px;
+  color: #333;
+  text-align: left;
+}
+
+form .input {
+  position: relative;
+  display: block;
+}
+
+form input {
+  display: block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  width: 100%;
+  height: 32px;
+  padding: 8px 10px;
+  outline: 0;
+  border: 1px solid #BDBDBD;
+  border-radius: 0;
+  background: #fff;
+  font: 13px/16px 'Open Sans',Helvetica,Arial,sans-serif;
+  color: #404040;
+}
+
+form .icon-append {
+  right: 5px;
+  padding-left: 3px;
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-color: #BDBDBD;
+  color: #A2A2A2;
+  position: absolute;
+  top: 5px;
+  width: 22px;
+  height: 22px;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+}
+
+form footer {
+  display: block;
+  padding: 7px 14px 55px;
+  border-top: 1px solid rgba(0,0,0,.1);
+  background: rgba(248,248,248,.9);
+}
+
+form footer .btn {
+  float: right;
+  height: 31px;
+  margin: 10px 0 0 5px;
+  padding: 0 22px;
+  font: 300 15px/29px 'Open Sans',Helvetica,Arial,sans-serif;
+  cursor: pointer;
+}
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 18px;
+  background-color: #e8e8e8;
+  border-color: #e8e8e8;
+  /*border-radius: 50%;*/
+}
