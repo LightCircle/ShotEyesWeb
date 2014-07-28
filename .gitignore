@@ -26,4 +26,4 @@ tmp/
 npm-debug.log
 
 # javascript模块，由bowe管理
-static/smart
+static/light

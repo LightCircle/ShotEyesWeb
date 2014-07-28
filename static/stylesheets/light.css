@@ -1,0 +1,137 @@
+.thumbnail {
+  display: block;
+  padding: 4px;
+  line-height: 1;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  /*-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);*/
+  /*-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);*/
+  /*box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);*/
+}
+
+.row-fluid {
+  width: 100%;
+  *zoom: 1;
+}
+.row-fluid:before,
+.row-fluid:after {
+  display: table;
+  content: "";
+}
+.row-fluid:after {
+  clear: both;
+}
+.row-fluid [class*="span"] {
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  margin-left: 2.127659574%;
+  *margin-left: 2.0744680846382977%;
+}
+.row-fluid [class*="span"]:first-child {
+  margin-left: 0;
+}
+
+.row-fluid .span9 {
+  width: 70.468085099%;
+  *width: 70.468085099%;
+}
+.row-fluid .span8 {
+  width: 65.95744680199999%;
+  *width: 65.90425531263828%;
+}
+
+.row-fluid .span4 {
+  width: 21.914893614%;
+  *width: 21.8617021246383%;
+}
+
+
+.thumbnail2 {
+  display: block;
+  line-height: 1;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.thumbnail2 > img {
+  display: block;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Title {color:#0088cc;
+  line-height: 27px;
+  font-size: 16px;
+  font-weight:bold;
+  margin: 0;
+  font-family: inherit;
+  text-rendering: optimizelegibility;
+  text-decoration:none;
+}
+
+p {
+  margin: 0 0 9px;
+  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.footer {
+  padding-top: 10px;
+  color: #f0f0f0;
+  text-align: center;
+}
+
+
+
+/************************************************/
+/* Tag */
+.label {
+  padding: 3px 7px 4px;
+  font-size: 10.998px;
+  font-weight: bold;
+  line-height: 25px;
+  color: white;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #999999;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  margin: 2px;
+}
+.label-info, .badge-info {
+  background-color: #3a87ad;
+}
+
+/***************************************************/
+/* 检索框 */
+.form-control {
+  -webkit-border-radius: 0px !important;
+  -moz-border-radius: 0px !important;
+  border-radius: 0px !important;
+  box-shadow: none;
+}
+
+/***********************/
+.navbar {
+  background-color: white;
+  line-height: 50px;
+  padding-left: 10px;
+}
+.navbar .nav a {
+  color: rgb(0, 0, 0);
+}

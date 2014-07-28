@@ -33,15 +33,15 @@ api:
 
 ## 网页 #####
 website:
-  home:
-    - url: "GET /admin/login"
-      template: "admin_common_login"
+  timeline:
+    - url: "GET /site/login"
+      template: "login"
       parameter:
         title: "login"
-    - url: "GET /admin/home"
-      template: "home"
+    - url: "GET /site/timeline"
+      template: "timeline"
       parameter:
-        title: "home"
+        title: "timeline"
 
   user:
     - url: "GET /admin/user/list"
@@ -76,4 +76,4 @@ website:
 ## 重定向 #####
 redirect:
   - url: "GET /"
-    target: "/admin/home"
+    target: "/site/timeline"

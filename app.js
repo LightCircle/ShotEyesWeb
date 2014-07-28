@@ -42,7 +42,7 @@ app.use(middleware.urlstamp);     // 设定URL变更标识
 app.use(function(err, req, res, next){
   if (err.code == 401 && helper.isBrowser(req)) {
     log.warn(err);
-    res.redirect("/admin/login");
+    res.redirect("/site/login");
     return;
   }
 

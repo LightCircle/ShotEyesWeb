@@ -67,6 +67,8 @@ module.exports = {
       , "^\/site/login.*"
       , "^\/register.*"
       , "^\/HealthCheck.*"
+
+      , "^\/site/timeline.*"
       ]
 
     , "ignoreTimeout": [
