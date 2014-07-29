@@ -2,33 +2,30 @@
 api:
 
   user:
-    - url: "GET /admin/login/user.json"
+    - url: "GET /login"
       custom: "login"
-    - url: "GET /admin/logout"
+    - url: "GET /logout"
       custom: "logout"
-    - url: "GET /admin/user/get.json"
-      action: "get"
-    - url: "GET /admin/user/list.json"
-      action: "getList"
-    - url: "POST /admin/user/add.json"
-      action: "add"
-    - url: "PUT /admin/user/update.json"
-      action: "update"
-    - url: "PUT /admin/user/remove.json"
-      action: "remove"
-    - url: "PUT /admin/user/restpass.json"
-      action: "restPass"
-    - url: "GET /admin/user/getGroups.json"
-      action: "getGroupsByUser"
 
-  file:
-    - url: "GET /admin/file/list.json"
-      action: "getList"
-    - url: "GET /admin/file/get.json"
+    - url: "GET /user/get"
       action: "get"
-    - url: "GET /admin/getFile/:fileId"
+    - url: "GET /user/list"
+      action: "getList"
+    - url: "POST /user/add"
+      action: "add"
+    - url: "PUT /user/update"
+      action: "update"
+    - url: "PUT /user/remove"
+      action: "remove"
+  tag:
+    - url: "GET /tag/list"
+      action: "getList"
+    - url: "POST /tag/add"
+      action: "add"
+  file:
+    - url: "GET /file/:fileId"
       custom: "getFile"
-    - url: "POST /admin/file/add.json"
+    - url: "POST /file/upload"
       action: "add"
 
 ## 网页 #####

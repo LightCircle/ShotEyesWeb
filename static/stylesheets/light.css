@@ -107,14 +107,17 @@ p {
   vertical-align: middle;
   white-space: nowrap;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #999999;
+  /*background-color: #999999;*/
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
   margin: 2px;
 }
-.label-info, .badge-info {
+.label-info {
   background-color: #3a87ad;
+}
+.label-active {
+  color: #ffff00;
 }
 
 /***************************************************/
@@ -130,8 +133,58 @@ p {
 .navbar {
   background-color: white;
   line-height: 50px;
-  padding-left: 10px;
+  /*padding-left: 10px;*/
 }
 .navbar .nav a {
   color: rgb(0, 0, 0);
+}
+
+
+/***************************************************/
+
+.file-container ol {
+  display: inline;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.file-container li {
+  background-color: #ffffff;
+  display: inline-block;
+  vertical-align: baseline;
+  margin: 6px 3px 0px 0px;
+  white-space: nowrap;
+  border-radius: 3px;
+  border: 1px solid #CCC;
+  padding: 0;
+}
+
+.file-container[disabled] li {
+  background-color: #eeeeee;
+}
+
+.file-container li span {
+  display: inline-block;
+  border-right: 1px solid #ccc;
+  color: #39c;
+  padding: 6px 4px 6px 6px;
+  line-height: 10px;
+  vertical-align: middle;
+  margin: 0;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.file-container li a {
+  line-height: 1px;
+  margin: 0 6px 0 6px;
+  color: #0088cc;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.file-container i {
+  cursor: pointer;
 }

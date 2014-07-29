@@ -1,7 +1,7 @@
 /**
- * @file 管理画面用户controller
- * @author sl_say@hotmail.com
- * @module admin.controllers.ctrl_user
+ * @file 用户controller
+ * @author r2space@gmail.com
+ * @module user
  */
 
 "use strict";
@@ -63,19 +63,16 @@ exports.add = function(handler ,callback) {
  */
 exports.remove = function(handler ,callback) {
 
-  var params = handler.params
-    , uid    = handler.uid;
-
-  log.debug("begin: remove user", uid);
+  log.debug("begin: remove user", handler.uid);
 
   user.remove(handler, function(err, result) {
 
     if (err) {
-      log.error(err, uid);
+      log.error(err, handler.uid);
       return callback(err);
     }
 
-    log.debug("finished: remove user", uid);
+    log.debug("finished: remove user", handler.uid);
 
     return callback(err, result);
   });
@@ -123,19 +120,16 @@ exports.update = function(handler ,callback) {
  */
 exports.get = function(handler ,callback) {
 
-  var params = handler.params
-    , uid    = handler.uid;
-
-  log.debug("begin: get user", uid);
+  log.debug("begin: get user", handler.uid);
 
   user.get(handler, function(err, result) {
 
     if (err) {
-      log.error(err, uid);
+      log.error(err, handler.uid);
       return callback(err);
     }
 
-    log.debug("finished: get user", uid);
+    log.debug("finished: get user", handler.uid);
 
     return callback(err, result);
   });
@@ -238,75 +232,6 @@ exports.restPass = function(handler ,callback) {
 };
 
 /**
- * @desc 获取一个用户下所有的groups情报
- * @param {Object} handler 上下文对象
- * @param {Function} callback 回调函数，返回用户
- */
-exports.getGroupsByUser = function(handler ,callback) {
-
-  var params = handler.params
-    , uid    = handler.uid;
-
-  log.debug("begin: getGroupsByUser", uid);
-
-  var getUser = function(done) {
-    user.get(handler, function(err, userInfo) {
-      return done(err, userInfo);
-    });
-  };
-
-  var getGroup = function(userInfo, done) {
-    if (userInfo && userInfo.groups) {
-
-      handler.addParams("groups", userInfo.groups);
-      group.getNameByIds(handler, function(err, result) {
-        return done(err, { user: userInfo, groups: result || [] });
-      });
-    } else {
-      return done(err, { user: userInfo });
-    }
-  };
-
-  var getSetting = function(object, done) {
-    var settingHandler = handler.copy({ condition: {type: "USER_TYPE", valid: 1} });
-    setting.getList(settingHandler, function(err, result) {
-      object.setting = result.items;
-      done(err, object);
-    });
-  };
-
-  async.waterfall([getUser, getGroup, getSetting], function(err, result) {
-    log.debug("finished: getGroupsByUser", uid);
-    callback(err, result);
-  });
-};
-
-/**
- * @desc Login
- * @param {Object} handler 上下文对象
- * @param {Function} callback 回调函数，返回用户
- */
-exports.isPasswordRight = function(handler ,callback) {
-
-  var params = handler.params
-    , uid    = handler.uid;
-
-  log.debug("begin: isPasswordRight user", uid);
-
-  user.isPasswordRight(handler, function(err, result) {
-
-    if (err) {
-      log.error(err, uid);
-      return callback(err);
-    }
-
-    log.debug("finished: isPasswordRight user", uid);
-
-    return callback(err, result);
-  });
-};
-
-/**
  * @desc Login
  * @param {Object} req 请求对象
  * @param {Object} res 响应对象
@@ -317,7 +242,6 @@ exports.login = function(req, res) {
   auth.simpleLogin(req, res, function(err, result) {
     return response.send(res, err, result);
   });
-
 };
 
 /**
@@ -329,7 +253,6 @@ exports.login = function(req, res) {
 exports.logout = function(req, res) {
 
   auth.simpleLogout(req);
-  return res.redirect("/admin/login");
-
+  return res.redirect("/site/login");
 };
 

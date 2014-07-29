@@ -1,13 +1,80 @@
 <!DOCTYPE html>
 <head>
 
-<title><%= title %></title>
-<% include _required.html %>
+  <title><%= title %></title>
+  <% include _required.html %>
+  <script type="text/javascript" src="<%= dynamic('/javascripts/login.js')%>"></script>
+  <link rel="stylesheet" media="screen" href="<%= dynamic('/stylesheets/login.css') %>">
 
 </head>
-<body>
+<body style="background: white;">
+
+<input type="hidden" id="_csrf" name="_csrf" value="<%= csrftoken %>" />
+
+<header class="header">
+  <div class="logo">
+    <img src="<%= dynamic('/images/logo.png')%>" alt="LightAdmin">
+  </div>
+  <span class="login-header-space">
+    <a href="register.html" class="btn btn-danger">Creat account</a>
+  </span>
+</header>
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-xs-12 col-sm-12 col-md-7 col-lg-8 hidden-xs hidden-sm">
+      <h1 class="txt-color-red login-header-big">
+      </h1>
+      <div class="hero"></div>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4">
+
+      <div class="well">
+        <form>
+          <header>Sign In</header>
+          <fieldset>
+            <section>
+              <label class="label">E-mail</label>
+              <label class="input">
+                <i class="icon-append fa fa-user"></i>
+                <input type="text" id="name">
+              </label>
+            </section>
+            <section>
+              <label class="label">Password ( <a href="#">Forgot password</a> )</label>
+              <label class="input">
+                <i class="icon-append fa fa-lock"></i>
+                <input type="password" id="pass">
+              </label>
+            </section>
+          </fieldset>
+          <footer>
+            <button class="btn btn-primary" id="signIn">Sign in</button>
+          </footer>
+        </form>
+      </div>
+
+      <ul class="list-inline text-center">
+        <li>
+          <a href="javascript:void(0);" class="btn btn-primary btn-circle"><i class="fa fa-wechat"></i></a>
+        </li>
+        <li>
+          <a href="javascript:void(0);" class="btn btn-info btn-circle"><i class="fa fa-weibo"></i></a>
+        </li>
+        <li>
+          <a href="javascript:void(0);" class="btn btn-success btn-circle"><i class="fa fa-tencent-weibo"></i></a>
+        </li>
+        <li>
+          <a href="javascript:void(0);" class="btn btn-warning btn-circle"><i class="fa fa-github"></i></a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>
 
 <% include _footer.html %>
-
 </body>
 </html>

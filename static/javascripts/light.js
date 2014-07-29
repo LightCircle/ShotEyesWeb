@@ -1,5 +1,5 @@
 // namespace
-var smart = {
+var light = {
 
   // The global setting
   image_prefix: function () {
@@ -164,7 +164,7 @@ var smart = {
       sendbutton.bind("click", function () {
         var u = uid
           , m = $('#_privatemsg_txt').val();
-        smart.send(u, m, function () {
+        light.send(u, m, function () {
           msgbox.modal('hide');
           sendbutton.unbind('click');
           if (success) {
@@ -482,7 +482,7 @@ var smart = {
       container.append(_.template(tmpl, {
         "start": startPage, "limit": limit, "active": activePage, "canPrev": startPage > 1, "canNext": (startPage + limit - 1 < Math.ceil(totalItems / rowCount)) && (limit >= pageCount)
       }));
-      if (smart.paginationScrollTop) {
+      if (light.paginationScrollTop) {
         return;
       } else {
 
@@ -545,7 +545,7 @@ var smart = {
     if (nc.checkPermission() == 1) {// 1 = Not Allowed, 2 = Denied, 0 = Allowed
       nc.requestPermission(function () {
         //得到授权之后的回调方法
-        smart.showNotify(title, options);
+        light.showNotify(title, options);
       });
 
     } else if (nc.checkPermission() == 0) {
