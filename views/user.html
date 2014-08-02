@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title><%= title %></title>
+  <% include _required.html %>
+  <script type="text/javascript" src="<%= dynamic('/javascripts/user.js')%>"></script>
+
+</head>
+<body>
+
+<% include _header.html %>
+
+<!-- 顶部标题 -->
+<header class="header" style="border-bottom: 1px solid #f4f4f4;">
+  <nav class="navbar navbar-static-top" role="navigation" style="margin: 0px;">
+    <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button" style="margin-left: 10px;">
+      <img src="<%= dynamic('/images/logo.png') %>" style="height: 30px;">
+    </a>
+    <div class="navbar-right">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="#" id="btnAdd">
+            <i class="fa fa-plus-square"></i>
+            <span>添加</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa fa-user"></i>
+            <span>Sara</span>
+          </a>
+        </li>
+        <li>
+          <a href="/logout">
+            <i class="fa fa-sign-out"></i>
+            <span>退出</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<div class="container" style="margin-top: 20px;">
+  <div class="row">
+    <div class="col-md-12 table-responsive">
+      <table class="table table-hover">
+        <thead>
+        <tr>
+          <th>#</th>
+          <th>名称</th>
+          <th>角色</th>
+          <th>类型</th>
+          <th>邮件</th>
+          <th>语言</th>
+          <th>时区</th>
+        </tr>
+        </thead>
+        <tbody id="listdata">
+          <tr>
+            <td>a1</td>
+            <td>a2</td>
+            <td>a3</td>
+            <td>a4</td>
+            <td>a5</td>
+            <td>a6</td>
+            <td>a7</td>
+          </tr>
+          <tr>
+            <td>a1</td>
+            <td>a2</td>
+            <td>a3</td>
+            <td>a4</td>
+            <td>a5</td>
+            <td>a6</td>
+            <td>a7</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- 标签模板 -->
+<script type="text/template" id="tmplUser">
+  <tr>
+    <td>{{id}}</td>
+    <td>{{name}}</td>
+    <td>{{roles}}</td>
+    <td>{{type}}</td>
+    <td>{{email}}</td>
+    <td>{{lang}}</td>
+    <td>{{timezone}}</td>
+  </tr>
+</script>
+
+<% include _footer.html %>
+
+</body>
+</html>

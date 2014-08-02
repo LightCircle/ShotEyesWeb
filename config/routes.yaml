@@ -41,26 +41,10 @@ website:
         title: "timeline"
 
   user:
-    - url: "GET /admin/user/list"
-      template: "datacenter/user_list"
+    - url: "GET /site/user/list"
+      template: "user"
       parameter:
         title: "user list"
-        topmenu: "datacenter"
-        sidemenu: "user"
-    - url: "GET /admin/user/add"
-      template: "datacenter/user_update"
-      parameter:
-        title: "user add"
-        operation: "add"
-        topmenu: "datacenter"
-        sidemenu: "user"
-    - url: "GET /admin/user/edit/:id"
-      template: "datacenter/user_update"
-      parameter:
-        title: "user update"
-        operation: "update"
-        topmenu: "datacenter"
-        sidemenu: "user"
 
   file:
     - url: "GET /admin/file/list"
