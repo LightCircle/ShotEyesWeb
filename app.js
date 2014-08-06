@@ -60,7 +60,7 @@ require("./controllers/user");
 light.framework.route.api(app);
 light.framework.route.website(app);
 light.framework.route.redirect(app);
-light.model.dispatcher.dispatch(app);
+light.model.route.dispatch(app);
 
 /**
  * 启动服务

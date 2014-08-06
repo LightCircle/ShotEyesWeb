@@ -76,4 +76,14 @@ module.exports = {
       ,"^\/site\/file\/add.json"
       ]
     }
+
+    /**
+     * 缓存定义
+     */
+  , cache: {
+      enable: true                  /* 是否启用缓存 */
+    , max: 500                      /* 缓存个数，缓存大小 */
+    , maxAge: 60 * 24               /* 缓存有效实现 分 */
+    , type: "memory"                /* 缓存类型 [memory | memcached] */
+    }
   };
