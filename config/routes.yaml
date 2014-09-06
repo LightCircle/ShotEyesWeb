@@ -22,11 +22,6 @@ api:
       action: "getList"
     - url: "POST /tag/add"
       action: "add"
-  file:
-    - url: "GET /file/:fileId"
-      custom: "getFile"
-    - url: "POST /file/upload"
-      action: "add"
 
 ## 网页 #####
 website:
