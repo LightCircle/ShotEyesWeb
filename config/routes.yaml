@@ -2,9 +2,9 @@
 api:
 
   user:
-    - url: "GET /login"
+    - url: "GET /user/login"
       custom: "login"
-    - url: "GET /logout"
+    - url: "GET /user/logout"
       custom: "logout"
 
     - url: "GET /user/get"

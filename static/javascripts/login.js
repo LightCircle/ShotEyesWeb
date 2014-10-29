@@ -13,7 +13,7 @@ $(function () {
       if (username.length <= 0 || password.length <= 0) {
         alert("请输入用户名和密码。");
       } else {
-        light.doget("/login", {name: username, password: password}, function(err, result) {
+        light.doget("/user/login", {name: username, password: password}, function(err, result) {
           if (err) {
             return alert("用户名或密码不正确，请从新输入。");
           }
