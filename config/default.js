@@ -63,7 +63,7 @@ module.exports = {
         "^\/$"
       , "^\/simplelogin.*"
       , "^\/simplelogout.*"
-      , "^\/login.*"
+      , "^\/user/login.*"
       , "^\/site/login.*"
       , "^\/register.*"
       , "^\/HealthCheck.*"
