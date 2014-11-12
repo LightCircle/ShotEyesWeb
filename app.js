@@ -8,6 +8,7 @@
 GLOBAL.light            = require("light-framework");
 GLOBAL.light.model      = require("light-model");
 GLOBAL.light.datarider  = require("light-model").datarider;
+GLOBAL.light.bridge     = require("light-bridge");
 
 var http        = light.lang.http
   , app         = light.util.express()

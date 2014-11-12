@@ -23,6 +23,12 @@ api:
     - url: "POST /tag/add"
       action: "add"
 
+  wechat:
+    - url: "GET /wechat"
+      custom: "verify"
+    - url: "POST /wechat"
+      custom: "dispatch"
+
 ## 网页 #####
 website:
   timeline:

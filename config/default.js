@@ -86,4 +86,11 @@ module.exports = {
     , maxAge: 60 * 24               /* 缓存有效实现 分 */
     , type: "memory"                /* 缓存类型 [memory | memcached] */
     }
+
+  , wechat: {
+      Token: "shoteyes"
+    , EncodingAESKey: "FIb9ifFZpd8GJlBfdOq7Ois2OMFgWTo4AIf7yoLgLAe"
+    , CorpID: "wx17cb32991794a206"
+    , Secret: "n1d8Cvwr6D4rUtaFyBcg-H0-92rx7hs0ZlMwBUZGwSojnf8SRRwmJeuI-Xn7ctOs"
+    }
   };
