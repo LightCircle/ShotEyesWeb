@@ -5,13 +5,20 @@
 
 "use strict";
 
-var wechat = light.bridge.wechat
-  ;
+var wechat = light.bridge.wechat;
 
 exports.dispatch = function(req, res) {
 
-  console.log(req.body);
-  wechat.reply(req, res);
+  wechat.reply(req, res, function(message, callback) {
+    console.log(message);
+    callback({
+      fromUsername: message.ToUserName,
+      toUsername: message.FromUserName,
+      createTime: new Date().getTime(),
+      msgType: "text",
+      content: "你好，我们收到了你的消息！"
+    });
+  });
 };
 
 exports.verify = function(req, res) {
