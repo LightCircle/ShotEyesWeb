@@ -7,10 +7,21 @@
 
 var wechat = light.bridge.wechat;
 
+/**
+ * 响应回调模式下的企业号的请求
+ * @param req
+ * @param res
+ */
 exports.dispatch = function(req, res) {
 
-  wechat.reply(req, res, function(message, callback) {
+  wechat.callback.reply(req, res, function(message, callback) {
+
     console.log(message);
+
+    if (message.MsgType == "") {
+      return callback(null);
+    }
+
     callback({
       fromUsername: message.ToUserName,
       toUsername: message.FromUserName,
@@ -21,6 +32,12 @@ exports.dispatch = function(req, res) {
   });
 };
 
+/**
+ * 验证回调模式
+ * @param req
+ * @param res
+ * @returns {*}
+ */
 exports.verify = function(req, res) {
-  return wechat.verify(req, res);
+  return wechat.callback.verify(req, res);
 };
