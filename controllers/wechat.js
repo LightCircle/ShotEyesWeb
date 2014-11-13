@@ -18,7 +18,7 @@ exports.dispatch = function(req, res) {
 
     console.log(message);
 
-    if (message.MsgType == "") {
+    if (message.MsgType == "event") {
       return callback(null);
     }
 
